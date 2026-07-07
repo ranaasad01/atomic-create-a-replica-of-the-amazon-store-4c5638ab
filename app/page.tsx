@@ -488,7 +488,10 @@ export default function HomePage() {
                 </span>
                 <h1
                   className="text-white text-4xl md:text-5xl font-bold leading-tight tracking-tight text-balance mb-4"
-                  data-atomic-id="a1gueshk">
+                  data-atomic-id="a1gueshk"
+                  style={{
+                    fontSize: "24px"
+                  }}>
                   {currentSlide.title}
                 </h1>
                 <p
