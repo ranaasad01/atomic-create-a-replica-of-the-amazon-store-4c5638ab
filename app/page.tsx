@@ -956,7 +956,8 @@ export default function HomePage() {
                 data-atomic-id="a21neau"
                 data-atomic-instance={__atomicIdx}
                 style={__atomicIdx === 2 ? {
-                  fontSize: "20px"
+                  fontSize: "14px",
+                  fontFamily: "Playfair Display"
                 } : __atomicIdx === 1 ? {
                   color: "#0f1111",
                   backgroundColor: "#f41515"
