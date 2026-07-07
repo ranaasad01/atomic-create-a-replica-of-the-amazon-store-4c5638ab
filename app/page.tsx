@@ -730,10 +730,7 @@ export default function HomePage() {
             </h2>
             <p
               className="text-[#565959] text-[15px] max-w-xl mx-auto leading-relaxed"
-              data-atomic-id="a1vwkbsn">
-              From fast delivery to easy returns, we make shopping simple,
-              safe, and satisfying every time.
-            </p>
+              data-atomic-id="a1vwkbsn">From fast delivery to easy returns, we make shopping simple and safe.</p>
           </motion.div>
 
           <motion.div
