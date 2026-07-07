@@ -942,7 +942,10 @@ export default function HomePage() {
                 className="text-[#0F1111] text-[14px] leading-relaxed mb-4 italic"
                 data-atomic-id="a21neau"
                 data-atomic-instance={__atomicIdx}
-                style={__atomicIdx === 0 ? {
+                style={__atomicIdx === 1 ? {
+                  color: "#0f1111",
+                  backgroundColor: "#f41515"
+                } : __atomicIdx === 0 ? {
                   color: "#f02424"
                 } : undefined}>{__atomicIdx === 0 ? "\"Prime delivery is unbeatable. I ordered a birthday gift at midnight and it arrived the next morning." : review.text}</p>
               <div
