@@ -469,66 +469,7 @@ export default function HomePage() {
               style={{
                 color: "#f1f3f3",
                 backgroundColor: "#00a8e1"
-              }}>
-              <motion.div
-                variants={slideInLeft}
-                initial="hidden"
-                animate="visible"
-                className="flex-1 max-w-xl"
-              >
-                <span
-                  className="inline-block text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4"
-                  style={{
-                    backgroundColor: currentSlide.accent + "33",
-                    color: currentSlide.accent,
-                    border: `1px solid ${currentSlide.accent}55`,
-                  }}
-                  data-atomic-id="ablvpfz">
-                  {currentSlide.badge}
-                </span>
-                <h1
-                  className="text-white text-4xl md:text-5xl font-bold leading-tight tracking-tight text-balance mb-4"
-                  data-atomic-id="a1gueshk"
-                  style={{
-                    fontSize: "24px"
-                  }}>
-                  {currentSlide.title}
-                </h1>
-                <p
-                  className="text-white/80 text-lg leading-relaxed mb-8 text-pretty"
-                  data-atomic-id="avqhhkh">The latest gadgets, wearables, and smart home devices and many other things</p>
-                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  <Link
-                    href={currentSlide.href}
-                    className="inline-flex items-center gap-2 font-bold text-[#0F1111] px-8 py-3 rounded-full text-[15px] transition-all duration-200"
-                    style={{ backgroundColor: currentSlide.accent }}
-                  >
-                    {currentSlide.cta}
-                    <ArrowRight size={16} />
-                  </Link>
-                </motion.div>
-              </motion.div>
-
-              {/* Slide indicators */}
-              <div
-                className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2"
-                data-atomic-id="a19ciiwx">
-                {heroSlides.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setHeroIndex(i)}
-                    className="transition-all duration-300 rounded-full"
-                    style={{
-                      width: i === heroIndex ? 24 : 8,
-                      height: 8,
-                      backgroundColor:
-                        i === heroIndex ? ACCENT_COLOR : "rgba(255,255,255,0.4)",
-                    }}
-                    data-atomic-id="apllp48"
-                    data-atomic-instance={i} />
-                ))}
-              </div>
-            </div>
+              }}>Explore</div>
           </motion.div>
         </AnimatePresence>
 
