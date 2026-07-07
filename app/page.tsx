@@ -320,7 +320,13 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
           )}
         </div>
       </Link>
-      <div className="px-3 pb-3" data-atomic-id="a1n261u8">
+      <div
+        className="px-3 pb-3"
+        data-atomic-id="a1n261u8"
+        style={{
+          color: "#eff1f1",
+          backgroundColor: "#ffd814"
+        }}>
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
