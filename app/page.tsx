@@ -37,7 +37,7 @@ const heroSlides = [
     href: "/search",
     bg: "from-[#002244] to-[#003366]",
     accent: "#00A8E1",
-    image: "https://assets.aboutamazon.com/8d/62/445fd851417187ec129e78eb9bef/aa-monthyear-articlename-standard-hero-v1-600kb-2000x1125.jpg",
+    image: "https://titoaistorageaccount.blob.core.windows.net/titoai-storage/assets/4c5638ab-e318-403f-b517-825f812b4b3a/d40488f7175d46e5929fc8577e5a12c3.png",
     badge: "Prime",
   },
   {
@@ -60,7 +60,7 @@ const flashDeals = [
     price: 29.99,
     originalPrice: 49.99,
     discount: 40,
-    image: "https://crdms.images.consumerreports.org/f_auto,w_1200/prod/products/cr/models/407823-smart-speakers-amazon-echo-dot-5th-gen-w-clock-10033746.png",
+    image: "https://titoaistorageaccount.blob.core.windows.net/titoai-storage/assets/4c5638ab-e318-403f-b517-825f812b4b3a/b00a08c3b1664e5b8068cc64e4f515fb.png",
     rating: 4.7,
     reviewCount: 234512,
     timeLeft: "2h 14m",
@@ -174,7 +174,7 @@ const trendingCategories = [
     id: "tc1",
     name: "Gaming",
     items: "50,000+",
-    image: "https://betinasia.zendesk.com/hc/article_attachments/22178895521170",
+    image: "https://titoaistorageaccount.blob.core.windows.net/titoai-storage/assets/4c5638ab-e318-403f-b517-825f812b4b3a/54f30530b23b4d9faa244e4042a3c756.png",
     href: "/search?category=gaming",
     color: "#1A1A2E",
   },
@@ -459,7 +459,11 @@ export default function HomePage() {
 
             <div
               className="relative max-w-[1500px] mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-8 w-full"
-              data-atomic-id="a1hk1q2i">
+              data-atomic-id="a1hk1q2i"
+              style={{
+                color: "#18f2f2",
+                backgroundColor: "#ff9900"
+              }}>
               <motion.div
                 variants={slideInLeft}
                 initial="hidden"
