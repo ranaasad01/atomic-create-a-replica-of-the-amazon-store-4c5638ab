@@ -853,7 +853,7 @@ export default function HomePage() {
                 className="flex flex-wrap gap-3"
                 data-atomic-id="a1c17d4r"
                 style={{
-                  color: "#eff1f1"
+                  color: "#f7f8f8"
                 }}>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                   <Link
