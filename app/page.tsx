@@ -849,7 +849,12 @@ export default function HomePage() {
                   {benefit}
                 </li>))}
               </ul>
-              <div className="flex flex-wrap gap-3" data-atomic-id="a1c17d4r">
+              <div
+                className="flex flex-wrap gap-3"
+                data-atomic-id="a1c17d4r"
+                style={{
+                  color: "#eff1f1"
+                }}>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                   <Link
                     href="/search"
