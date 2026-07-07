@@ -461,8 +461,8 @@ export default function HomePage() {
               className="relative max-w-[1500px] mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-8 w-full"
               data-atomic-id="a1hk1q2i"
               style={{
-                color: "#18f2f2",
-                backgroundColor: "#ff9900"
+                color: "#ededed",
+                backgroundColor: "#00a8e1"
               }}>
               <motion.div
                 variants={slideInLeft}
