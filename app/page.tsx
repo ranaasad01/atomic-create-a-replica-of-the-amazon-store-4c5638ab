@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { Star, ChevronRight, ChevronLeft, Truck, Shield, RotateCcw, Headphones, Zap, Gift, Clock, ArrowRight, Check } from 'lucide-react';
@@ -210,8 +210,8 @@ function StarRating({ rating, count }: { rating: number; count: number }) {
   const fullStars = Math.floor(rating);
   const hasHalf = rating - fullStars >= 0.5;
   return (
-    <div className="flex items-center gap-1">
-      <div className="flex items-center">
+    <div className="flex items-center gap-1" data-atomic-id="a1akylij">
+      <div className="flex items-center" data-atomic-id="a1l3t2ha">
         {Array.from({ length: 5 }).map((_, i) => (
           <Star
             key={i}
@@ -226,7 +226,9 @@ function StarRating({ rating, count }: { rating: number; count: number }) {
           />
         ))}
       </div>
-      <span className="text-[#007185] text-[12px] hover:text-[#C7511F] cursor-pointer">
+      <span
+        className="text-[#007185] text-[12px] hover:text-[#C7511F] cursor-pointer"
+        data-atomic-id="a12zn5z3">
         {(count ?? 0).toLocaleString("en-US")}
       </span>
     </div>
@@ -253,7 +255,9 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
       style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.08)" }}
     >
       <Link href={`/product/${product.id}`} className="block">
-        <div className="relative bg-[#F7F8F8] aspect-square overflow-hidden">
+        <div
+          className="relative bg-[#F7F8F8] aspect-square overflow-hidden"
+          data-atomic-id="a10onl8x">
           <img
             src={product.image}
             alt={product.title}
@@ -262,47 +266,61 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
               (e.target as HTMLImageElement).src =
                 "https://target.scene7.com/is/image/Target/GUEST_3d817f79-35b7-4485-a0bc-0637a334b241?wid=300&hei=300&fmt=pjpeg";
             }}
-          />
+            data-atomic-id="aqrhodq" />
           {product.badge && (
-            <span className="absolute top-2 left-2 bg-[#CC0C39] text-white text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wide">
+            <span
+              className="absolute top-2 left-2 bg-[#CC0C39] text-white text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wide"
+              data-atomic-id="a1hcu7xt">
               {product.badge}
             </span>
           )}
           {product.isPrime && (
-            <span className="absolute bottom-2 left-2 bg-[#00A8E1] text-white text-[9px] font-bold px-1.5 py-0.5 rounded-sm">
+            <span
+              className="absolute bottom-2 left-2 bg-[#00A8E1] text-white text-[9px] font-bold px-1.5 py-0.5 rounded-sm"
+              data-atomic-id="ameabzn">
               prime
             </span>
           )}
         </div>
-        <div className="p-3 flex flex-col gap-1.5 flex-1">
-          <p className="text-[#0F1111] text-[13px] leading-snug line-clamp-2 font-medium">
+        <div className="p-3 flex flex-col gap-1.5 flex-1" data-atomic-id="a10q2fdf">
+          <p
+            className="text-[#0F1111] text-[13px] leading-snug line-clamp-2 font-medium"
+            data-atomic-id="a1pep4w3">
             {product.title}
           </p>
           <StarRating rating={product.rating} count={product.reviewCount} />
-          <div className="flex items-baseline gap-1.5 mt-auto pt-1">
-            <span className="text-[#CC0C39] text-[11px] font-medium">
+          <div
+            className="flex items-baseline gap-1.5 mt-auto pt-1"
+            data-atomic-id="axm6soq">
+            <span
+              className="text-[#CC0C39] text-[11px] font-medium"
+              data-atomic-id="a1rlyglo">
               {product.originalPrice ? "-" + Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100) + "%" : ""}
             </span>
-            <span className="text-[#0F1111] text-[18px] font-bold">
+            <span
+              className="text-[#0F1111] text-[18px] font-bold"
+              data-atomic-id="a1swk2q6">
               ${(product.price ?? 0).toFixed(2)}
             </span>
           </div>
           {product.originalPrice && (
-            <p className="text-[#565959] text-[11px]">
+            <p className="text-[#565959] text-[11px]" data-atomic-id="acropzp">
               List:{" "}
-              <span className="line-through">
+              <span className="line-through" data-atomic-id="a1bnzbh8">
                 ${product.originalPrice.toFixed(2)}
               </span>
             </p>
           )}
           {product.isPrime && (
-            <p className="text-[#00A8E1] text-[11px] font-medium">
+            <p
+              className="text-[#00A8E1] text-[11px] font-medium"
+              data-atomic-id="a1j112s7">
               FREE delivery tomorrow
             </p>
           )}
         </div>
       </Link>
-      <div className="px-3 pb-3">
+      <div className="px-3 pb-3" data-atomic-id="a1n261u8">
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
@@ -324,7 +342,9 @@ function FlashDealCard({ deal }: { deal: (typeof flashDeals)[0] }) {
       style={{ boxShadow: "0 1px 4px rgba(0,0,0,0.08)" }}
     >
       <Link href="/search?filter=deals" className="block">
-        <div className="relative bg-[#F7F8F8] aspect-square overflow-hidden">
+        <div
+          className="relative bg-[#F7F8F8] aspect-square overflow-hidden"
+          data-atomic-id="ansnwoi">
           <img
             src={deal.image}
             alt={deal.title}
@@ -333,37 +353,49 @@ function FlashDealCard({ deal }: { deal: (typeof flashDeals)[0] }) {
               (e.target as HTMLImageElement).src =
                 "https://speedtalkmobile.com/wp-content/uploads/2022/06/speedtalk-mobile-15-dollar-6gb-unlimited-talk-text-plan-300x300.png";
             }}
-          />
-          <div className="absolute top-2 left-2 bg-[#CC0C39] text-white text-[10px] font-bold px-2 py-0.5 rounded-sm">
+            data-atomic-id="axrmewf" />
+          <div
+            className="absolute top-2 left-2 bg-[#CC0C39] text-white text-[10px] font-bold px-2 py-0.5 rounded-sm"
+            data-atomic-id="axt14qf">
             -{deal.discount}%
           </div>
-          <div className="absolute top-2 right-2 flex items-center gap-1 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded-sm">
+          <div
+            className="absolute top-2 right-2 flex items-center gap-1 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded-sm"
+            data-atomic-id="axufyux">
             <Clock size={9} />
             {deal.timeLeft}
           </div>
         </div>
-        <div className="p-3">
-          <p className="text-[#0F1111] text-[12px] leading-snug line-clamp-2 font-medium mb-1.5">
+        <div className="p-3" data-atomic-id="anu2qt0">
+          <p
+            className="text-[#0F1111] text-[12px] leading-snug line-clamp-2 font-medium mb-1.5"
+            data-atomic-id="a47mc5g">
             {deal.title}
           </p>
           <StarRating rating={deal.rating} count={deal.reviewCount} />
-          <div className="flex items-baseline gap-1.5 mt-1.5">
-            <span className="text-[#CC0C39] text-[16px] font-bold">
+          <div className="flex items-baseline gap-1.5 mt-1.5" data-atomic-id="a14mbj7f">
+            <span className="text-[#CC0C39] text-[16px] font-bold" data-atomic-id="af1x6x9">
               ${(deal.price ?? 0).toFixed(2)}
             </span>
-            <span className="text-[#565959] text-[11px] line-through">
+            <span
+              className="text-[#565959] text-[11px] line-through"
+              data-atomic-id="agcit1r">
               ${(deal.originalPrice ?? 0).toFixed(2)}
             </span>
           </div>
           {/* Claimed bar */}
-          <div className="mt-2">
-            <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+          <div className="mt-2" data-atomic-id="a14p57gf">
+            <div
+              className="h-1.5 bg-gray-200 rounded-full overflow-hidden"
+              data-atomic-id="a5e7nj6">
               <div
                 className="h-full bg-[#CC0C39] rounded-full"
                 style={{ width: `${deal.claimed}%` }}
-              />
+                data-atomic-id="a5d3js5" />
             </div>
-            <p className="text-[#CC0C39] text-[10px] font-bold mt-0.5">
+            <p
+              className="text-[#CC0C39] text-[10px] font-bold mt-0.5"
+              data-atomic-id="aypdu41">
               {deal.claimed}% claimed
             </p>
           </div>
@@ -394,9 +426,12 @@ export default function HomePage() {
   const currentSlide = heroSlides[heroIndex] ?? heroSlides[0];
 
   return (
-    <main className="bg-[#EAEDED] min-h-screen">
+    <main className="bg-[#EAEDED] min-h-screen" data-atomic-id="a1blot3e">
       {/* ── Hero Carousel ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden" style={{ minHeight: 420 }}>
+      <section
+        className="relative overflow-hidden"
+        style={{ minHeight: 420 }}
+        data-atomic-id="a1wke2kf">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide.id}
@@ -408,7 +443,7 @@ export default function HomePage() {
             style={{ minHeight: 420 }}
           >
             {/* Background image */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0" data-atomic-id="a1himvy0">
               <img
                 src={currentSlide.image}
                 alt={currentSlide.title}
@@ -416,11 +451,15 @@ export default function HomePage() {
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = "none";
                 }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+                data-atomic-id="a12htelx" />
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"
+                data-atomic-id="a12j84fx" />
             </div>
 
-            <div className="relative max-w-[1500px] mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-8 w-full">
+            <div
+              className="relative max-w-[1500px] mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-8 w-full"
+              data-atomic-id="a1hk1q2i">
               <motion.div
                 variants={slideInLeft}
                 initial="hidden"
@@ -434,15 +473,17 @@ export default function HomePage() {
                     color: currentSlide.accent,
                     border: `1px solid ${currentSlide.accent}55`,
                   }}
-                >
+                  data-atomic-id="ablvpfz">
                   {currentSlide.badge}
                 </span>
-                <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight tracking-tight text-balance mb-4">
+                <h1
+                  className="text-white text-4xl md:text-5xl font-bold leading-tight tracking-tight text-balance mb-4"
+                  data-atomic-id="a1gueshk">
                   {currentSlide.title}
                 </h1>
-                <p className="text-white/80 text-lg leading-relaxed mb-8 text-pretty">
-                  {currentSlide.subtitle}
-                </p>
+                <p
+                  className="text-white/80 text-lg leading-relaxed mb-8 text-pretty"
+                  data-atomic-id="avqhhkh">The latest gadgets, wearables, and smart home devices and many other things</p>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                   <Link
                     href={currentSlide.href}
@@ -456,7 +497,9 @@ export default function HomePage() {
               </motion.div>
 
               {/* Slide indicators */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+              <div
+                className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2"
+                data-atomic-id="a19ciiwx">
                 {heroSlides.map((_, i) => (
                   <button
                     key={i}
@@ -468,7 +511,8 @@ export default function HomePage() {
                       backgroundColor:
                         i === heroIndex ? ACCENT_COLOR : "rgba(255,255,255,0.4)",
                     }}
-                  />
+                    data-atomic-id="apllp48"
+                    data-atomic-instance={i} />
                 ))}
               </div>
             </div>
@@ -481,7 +525,7 @@ export default function HomePage() {
             setHeroIndex((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
           }
           className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 transition-colors z-10"
-        >
+          data-atomic-id="a11h99hp">
           <ChevronLeft size={20} />
         </button>
         <button
@@ -489,14 +533,16 @@ export default function HomePage() {
             setHeroIndex((prev) => (prev + 1) % heroSlides.length)
           }
           className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 transition-colors z-10"
-        >
+          data-atomic-id="aqiug3z">
           <ChevronRight size={20} />
         </button>
       </section>
-
       {/* ── Category Quick Links ───────────────────────────────────────── */}
-      <section id="categories" className="bg-white border-b border-black/5">
-        <div className="max-w-[1500px] mx-auto px-4 py-4">
+      <section
+        id="categories"
+        className="bg-white border-b border-black/5"
+        data-atomic-id="a1jscr5v">
+        <div className="max-w-[1500px] mx-auto px-4 py-4" data-atomic-id="aco7yms">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -504,24 +550,21 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-40px" }}
             className="flex items-center gap-2 overflow-x-auto scrollbar-hide pb-1"
           >
-            {categories.map((cat) => (
-              <motion.div key={cat.id} variants={fadeIn}>
-                <Link
-                  href={`/search?category=${cat.slug}`}
-                  className="flex-shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-full bg-[#F7F8F8] hover:bg-[#FF9900]/10 border border-black/5 hover:border-[#FF9900]/40 text-[#0F1111] text-[13px] font-medium transition-all duration-200 whitespace-nowrap"
-                >
-                  <span>{cat.icon}</span>
-                  <span>{cat.name}</span>
-                </Link>
-              </motion.div>
-            ))}
+            {categories.map((cat, __atomicIdx) => (<motion.div key={cat.id} variants={fadeIn}>
+              <Link
+                href={`/search?category=${cat.slug}`}
+                className="flex-shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-full bg-[#F7F8F8] hover:bg-[#FF9900]/10 border border-black/5 hover:border-[#FF9900]/40 text-[#0F1111] text-[13px] font-medium transition-all duration-200 whitespace-nowrap"
+              >
+                <span data-atomic-id="a1hyof2y" data-atomic-instance={__atomicIdx}>{cat.icon}</span>
+                <span data-atomic-id="a1j9a17g" data-atomic-instance={__atomicIdx}>{cat.name}</span>
+              </Link>
+            </motion.div>))}
           </motion.div>
         </div>
       </section>
-
       {/* ── Flash Deals ────────────────────────────────────────────────── */}
-      <section id="deals" className="py-8">
-        <div className="max-w-[1500px] mx-auto px-4">
+      <section id="deals" className="py-8" data-atomic-id="a15oeiby">
+        <div className="max-w-[1500px] mx-auto px-4" data-atomic-id="a17fq7pb">
           <motion.div
             variants={fadeInUp}
             initial="hidden"
@@ -529,13 +572,17 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-60px" }}
             className="flex items-center justify-between mb-5"
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3" data-atomic-id="a3r4vad">
               <Zap size={22} className="text-[#CC0C39]" />
-              <h2 className="text-[#0F1111] text-[22px] font-bold">
+              <h2
+                className="text-[#0F1111] text-[22px] font-bold"
+                data-atomic-id="a1oakctd">
                 Today's Lightning Deals
               </h2>
               {mounted && (
-                <span className="flex items-center gap-1 text-[#CC0C39] text-[13px] font-medium bg-[#CC0C39]/10 px-2 py-0.5 rounded-full">
+                <span
+                  className="flex items-center gap-1 text-[#CC0C39] text-[13px] font-medium bg-[#CC0C39]/10 px-2 py-0.5 rounded-full"
+                  data-atomic-id="aesifuv">
                   <Clock size={12} />
                   Ends soon
                 </span>
@@ -562,10 +609,9 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── Featured Products ──────────────────────────────────────────── */}
-      <section id="featured" className="py-8">
-        <div className="max-w-[1500px] mx-auto px-4">
+      <section id="featured" className="py-8" data-atomic-id="aswd6xe">
+        <div className="max-w-[1500px] mx-auto px-4" data-atomic-id="a1kzhceb">
           <motion.div
             variants={fadeInUp}
             initial="hidden"
@@ -573,7 +619,7 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-60px" }}
             className="flex items-center justify-between mb-5"
           >
-            <h2 className="text-[#0F1111] text-[22px] font-bold">
+            <h2 className="text-[#0F1111] text-[22px] font-bold" data-atomic-id="aklh9b4">
               Best Sellers
             </h2>
             <Link
@@ -597,10 +643,9 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── Trending Categories ────────────────────────────────────────── */}
-      <section id="trending" className="py-8">
-        <div className="max-w-[1500px] mx-auto px-4">
+      <section id="trending" className="py-8" data-atomic-id="ag4bviu">
+        <div className="max-w-[1500px] mx-auto px-4" data-atomic-id="a1yj8h3b">
           <motion.h2
             variants={fadeInUp}
             initial="hidden"
@@ -618,46 +663,59 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-60px" }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
           >
-            {trendingCategories.map((cat) => (
-              <motion.div key={cat.id} variants={scaleIn}>
-                <Link href={cat.href} className="block group">
-                  <motion.div
-                    whileHover={{ scale: 1.03 }}
-                    transition={{ duration: 0.2 }}
-                    className="relative rounded-xl overflow-hidden aspect-[4/3]"
-                    style={{ backgroundColor: cat.color }}
-                  >
-                    <img
-                      src={cat.image}
-                      alt={cat.name}
-                      className="w-full h-full object-cover opacity-70 group-hover:opacity-80 transition-opacity duration-300"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = "none";
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 p-4">
-                      <p className="text-white font-bold text-[18px] leading-tight">
-                        {cat.name}
-                      </p>
-                      <p className="text-white/70 text-[12px]">
-                        {cat.items} items
-                      </p>
-                    </div>
-                    <div className="absolute top-3 right-3 bg-[#FF9900] text-[#0F1111] text-[10px] font-bold px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                      Shop Now
-                    </div>
-                  </motion.div>
-                </Link>
-              </motion.div>
-            ))}
+            {trendingCategories.map((cat, __atomicIdx) => (<motion.div key={cat.id} variants={scaleIn}>
+              <Link href={cat.href} className="block group">
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.2 }}
+                  className="relative rounded-xl overflow-hidden aspect-[4/3]"
+                  style={{ backgroundColor: cat.color }}
+                >
+                  <img
+                    src={cat.image}
+                    alt={cat.name}
+                    className="w-full h-full object-cover opacity-70 group-hover:opacity-80 transition-opacity duration-300"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                    data-atomic-id="a1wp7hx9"
+                    data-atomic-instance={__atomicIdx} />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
+                    data-atomic-id="a1wqm7r9"
+                    data-atomic-instance={__atomicIdx} />
+                  <div
+                    className="absolute bottom-0 left-0 p-4"
+                    data-atomic-id="a1ws11vr"
+                    data-atomic-instance={__atomicIdx}>
+                    <p
+                      className="text-white font-bold text-[18px] leading-tight"
+                      data-atomic-id="a1dpxtkn"
+                      data-atomic-instance={__atomicIdx}>
+                      {cat.name}
+                    </p>
+                    <p
+                      className="text-white/70 text-[12px]"
+                      data-atomic-id="a1dpxv95"
+                      data-atomic-instance={__atomicIdx}>
+                      {cat.items} items
+                    </p>
+                  </div>
+                  <div
+                    className="absolute top-3 right-3 bg-[#FF9900] text-[#0F1111] text-[10px] font-bold px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    data-atomic-id="a1wtfw09"
+                    data-atomic-instance={__atomicIdx}>
+                    Shop Now
+                  </div>
+                </motion.div>
+              </Link>
+            </motion.div>))}
           </motion.div>
         </div>
       </section>
-
       {/* ── Value Props ────────────────────────────────────────────────── */}
-      <section id="about" className="py-12 bg-white">
-        <div className="max-w-[1500px] mx-auto px-4">
+      <section id="about" className="py-12 bg-white" data-atomic-id="a10er2i9">
+        <div className="max-w-[1500px] mx-auto px-4" data-atomic-id="ajxchtu">
           <motion.div
             variants={fadeInUp}
             initial="hidden"
@@ -665,10 +723,14 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-60px" }}
             className="text-center mb-10"
           >
-            <h2 className="text-[#0F1111] text-[28px] font-bold mb-2">
+            <h2
+              className="text-[#0F1111] text-[28px] font-bold mb-2"
+              data-atomic-id="a12w3ke7">
               Why Millions Choose {APP_NAME}
             </h2>
-            <p className="text-[#565959] text-[15px] max-w-xl mx-auto leading-relaxed">
+            <p
+              className="text-[#565959] text-[15px] max-w-xl mx-auto leading-relaxed"
+              data-atomic-id="a1vwkbsn">
               From fast delivery to easy returns, we make shopping simple,
               safe, and satisfying every time.
             </p>
@@ -681,7 +743,7 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-60px" }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            {valueProps.map((vp) => {
+            {valueProps.map((vp, __atomicIdx) => {
               const Icon = vp.icon;
               return (
                 <motion.div
@@ -697,13 +759,20 @@ export default function HomePage() {
                   <div
                     className="w-14 h-14 rounded-full flex items-center justify-center mb-4"
                     style={{ backgroundColor: vp.color + "18" }}
-                  >
+                    data-atomic-id="a1fossdu"
+                    data-atomic-instance={__atomicIdx}>
                     <Icon size={26} style={{ color: vp.color }} />
                   </div>
-                  <h3 className="text-[#0F1111] font-bold text-[15px] mb-2">
+                  <h3
+                    className="text-[#0F1111] font-bold text-[15px] mb-2"
+                    data-atomic-id="aa6dtcc"
+                    data-atomic-instance={__atomicIdx}>
                     {vp.title}
                   </h3>
-                  <p className="text-[#565959] text-[13px] leading-relaxed">
+                  <p
+                    className="text-[#565959] text-[13px] leading-relaxed"
+                    data-atomic-id="a131w4qr"
+                    data-atomic-instance={__atomicIdx}>
                     {vp.description}
                   </p>
                 </motion.div>
@@ -712,10 +781,9 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── Prime Banner ───────────────────────────────────────────────── */}
-      <section className="py-10">
-        <div className="max-w-[1500px] mx-auto px-4">
+      <section className="py-10" data-atomic-id="anmpr3p">
+        <div className="max-w-[1500px] mx-auto px-4" data-atomic-id="axh3miu">
           <motion.div
             variants={fadeIn}
             initial="hidden"
@@ -728,25 +796,33 @@ export default function HomePage() {
             }}
           >
             {/* Decorative glow */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#00A8E1]/10 rounded-full blur-3xl pointer-events-none" />
+            <div
+              className="absolute top-0 right-0 w-96 h-96 bg-[#00A8E1]/10 rounded-full blur-3xl pointer-events-none"
+              data-atomic-id="a15kblym" />
 
             <motion.div variants={slideInLeft} className="flex-1">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="bg-[#00A8E1] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+              <div className="flex items-center gap-2 mb-3" data-atomic-id="a1bvk0mr">
+                <span
+                  className="bg-[#00A8E1] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wide"
+                  data-atomic-id="a14mqxdx">
                   Prime
                 </span>
-                <span className="text-white/60 text-[13px]">
+                <span className="text-white/60 text-[13px]" data-atomic-id="a15xcjif">
                   30-day free trial
                 </span>
               </div>
-              <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-tight mb-3 text-balance">
+              <h2
+                className="text-white text-[28px] md:text-[36px] font-bold leading-tight mb-3 text-balance"
+                data-atomic-id="amz5k4s">
                 Get More with Amazon Prime
               </h2>
-              <p className="text-white/70 text-[15px] leading-relaxed mb-6 max-w-lg">
+              <p
+                className="text-white/70 text-[15px] leading-relaxed mb-6 max-w-lg"
+                data-atomic-id="afrhft0">
                 Free two-day delivery, exclusive deals, Prime Video, Prime
                 Music, unlimited photo storage, and so much more.
               </p>
-              <ul className="grid grid-cols-2 gap-2 mb-8">
+              <ul className="grid grid-cols-2 gap-2 mb-8" data-atomic-id="amz8nfb">
                 {[
                   "Free 2-day delivery",
                   "Prime Video streaming",
@@ -754,17 +830,16 @@ export default function HomePage() {
                   "Exclusive member deals",
                   "Unlimited photo storage",
                   "Prime Reading",
-                ].map((benefit) => (
-                  <li
-                    key={benefit}
-                    className="flex items-center gap-2 text-white/80 text-[13px]"
-                  >
-                    <Check size={14} className="text-[#00A8E1] flex-shrink-0" />
-                    {benefit}
-                  </li>
-                ))}
+                ].map((benefit, __atomicIdx) => (<li
+                  key={benefit}
+                  className="flex items-center gap-2 text-white/80 text-[13px]"
+                  data-atomic-id="ao73hmh"
+                  data-atomic-instance={__atomicIdx}>
+                  <Check size={14} className="text-[#00A8E1] flex-shrink-0" />
+                  {benefit}
+                </li>))}
               </ul>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3" data-atomic-id="a1c17d4r">
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                   <Link
                     href="/search"
@@ -789,30 +864,37 @@ export default function HomePage() {
               variants={slideInRight}
               className="hidden md:flex flex-col items-center gap-4"
             >
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center min-w-[200px]">
-                <p className="text-white/60 text-[12px] uppercase tracking-wide mb-1">
+              <div
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center min-w-[200px]"
+                data-atomic-id="a1infkz9">
+                <p
+                  className="text-white/60 text-[12px] uppercase tracking-wide mb-1"
+                  data-atomic-id="adnxtr9">
                   Starting at
                 </p>
-                <p className="text-white text-[40px] font-bold leading-none">
+                <p
+                  className="text-white text-[40px] font-bold leading-none"
+                  data-atomic-id="adnxvfr">
                   $14
-                  <span className="text-[20px] font-medium">.99</span>
+                  <span className="text-[20px] font-medium" data-atomic-id="ae8pqek">.99</span>
                 </p>
-                <p className="text-white/60 text-[12px] mt-1">per month</p>
-                <div className="mt-4 pt-4 border-t border-white/10">
-                  <p className="text-[#00A8E1] text-[13px] font-medium">
+                <p className="text-white/60 text-[12px] mt-1" data-atomic-id="adnxx49">per month</p>
+                <div className="mt-4 pt-4 border-t border-white/10" data-atomic-id="aztxzj2">
+                  <p
+                    className="text-[#00A8E1] text-[13px] font-medium"
+                    data-atomic-id="avta59q">
                     or $139/year
                   </p>
-                  <p className="text-white/50 text-[11px]">Save 2 months</p>
+                  <p className="text-white/50 text-[11px]" data-atomic-id="avta6y8">Save 2 months</p>
                 </div>
               </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
-
       {/* ── Customer Reviews ───────────────────────────────────────────── */}
-      <section id="reviews" className="py-12 bg-white">
-        <div className="max-w-[1500px] mx-auto px-4">
+      <section id="reviews" className="py-12 bg-white" data-atomic-id="a17x4y34">
+        <div className="max-w-[1500px] mx-auto px-4" data-atomic-id="a1hwbp8h">
           <motion.div
             variants={fadeInUp}
             initial="hidden"
@@ -820,10 +902,12 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-60px" }}
             className="text-center mb-10"
           >
-            <h2 className="text-[#0F1111] text-[28px] font-bold mb-2">
+            <h2
+              className="text-[#0F1111] text-[28px] font-bold mb-2"
+              data-atomic-id="a1l6pvha">
               What Our Customers Say
             </h2>
-            <p className="text-[#565959] text-[15px]">
+            <p className="text-[#565959] text-[15px]" data-atomic-id="a16mnw52">
               Trusted by hundreds of millions of shoppers worldwide
             </p>
           </motion.div>
@@ -835,56 +919,77 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-60px" }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            {testimonials.map((review) => (
-              <motion.div
-                key={review.id}
-                variants={fadeInUp}
-                whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="bg-[#FAFAFA] rounded-xl p-6 border border-black/5"
-                style={{
-                  boxShadow:
-                    "0 1px 2px rgba(0,0,0,0.04), 0 8px 24px -8px rgba(0,0,0,0.10)",
-                }}
-              >
-                <div className="flex items-center gap-1 mb-3">
-                  {Array.from({ length: review.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      size={14}
-                      className="fill-[#FF9900] text-[#FF9900]"
-                    />
-                  ))}
+            {testimonials.map((review, __atomicIdx) => (<motion.div
+              key={review.id}
+              variants={fadeInUp}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="bg-[#FAFAFA] rounded-xl p-6 border border-black/5"
+              style={{
+                boxShadow:
+                  "0 1px 2px rgba(0,0,0,0.04), 0 8px 24px -8px rgba(0,0,0,0.10)",
+              }}
+            >
+              <div
+                className="flex items-center gap-1 mb-3"
+                data-atomic-id="apwuv13"
+                data-atomic-instance={__atomicIdx}>
+                {Array.from({ length: review.rating }).map((_, i) => (
+                  <Star
+                    key={i}
+                    size={14}
+                    className="fill-[#FF9900] text-[#FF9900]"
+                  />
+                ))}
+              </div>
+              <p
+                className="text-[#0F1111] text-[14px] leading-relaxed mb-4 italic"
+                data-atomic-id="a21neau"
+                data-atomic-instance={__atomicIdx}>
+                "{review.text}"
+              </p>
+              <div
+                className="flex items-center gap-3 pt-4 border-t border-black/5"
+                data-atomic-id="apzoja3"
+                data-atomic-instance={__atomicIdx}>
+                <div
+                  className="w-9 h-9 rounded-full bg-[#FF9900]/20 flex items-center justify-center text-[#FF9900] font-bold text-[14px] flex-shrink-0"
+                  data-atomic-id="a146r8xq"
+                  data-atomic-instance={__atomicIdx}>
+                  {review.name?.charAt(0) ?? "?"}
                 </div>
-                <p className="text-[#0F1111] text-[14px] leading-relaxed mb-4 italic">
-                  "{review.text}"
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-black/5">
-                  <div className="w-9 h-9 rounded-full bg-[#FF9900]/20 flex items-center justify-center text-[#FF9900] font-bold text-[14px] flex-shrink-0">
-                    {review.name?.charAt(0) ?? "?"}
-                  </div>
-                  <div>
-                    <p className="text-[#0F1111] text-[13px] font-bold">
-                      {review.name}
-                    </p>
-                    <p className="text-[#565959] text-[11px]">
-                      {review.location} · Verified Purchase
-                    </p>
-                  </div>
-                  <div className="ml-auto">
-                    <span className="text-[#007185] text-[11px] bg-[#007185]/10 px-2 py-0.5 rounded-full">
-                      {review.product}
-                    </span>
-                  </div>
+                <div data-atomic-id="a1486328" data-atomic-instance={__atomicIdx}>
+                  <p
+                    className="text-[#0F1111] text-[13px] font-bold"
+                    data-atomic-id="adzirf4"
+                    data-atomic-instance={__atomicIdx}>
+                    {review.name}
+                  </p>
+                  <p
+                    className="text-[#565959] text-[11px]"
+                    data-atomic-id="adzit3m"
+                    data-atomic-instance={__atomicIdx}>
+                    {review.location} · Verified Purchase
+                  </p>
                 </div>
-              </motion.div>
-            ))}
+                <div
+                  className="ml-auto"
+                  data-atomic-id="a149kx6q"
+                  data-atomic-instance={__atomicIdx}>
+                  <span
+                    className="text-[#007185] text-[11px] bg-[#007185]/10 px-2 py-0.5 rounded-full"
+                    data-atomic-id="azrjzro"
+                    data-atomic-instance={__atomicIdx}>
+                    {review.product}
+                  </span>
+                </div>
+              </div>
+            </motion.div>))}
           </motion.div>
         </div>
       </section>
-
       {/* ── Gift Cards & Special Offers ────────────────────────────────── */}
-      <section id="gifts" className="py-10">
-        <div className="max-w-[1500px] mx-auto px-4">
+      <section id="gifts" className="py-10" data-atomic-id="av53mok">
+        <div className="max-w-[1500px] mx-auto px-4" data-atomic-id="a1vg2txh">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -902,15 +1007,23 @@ export default function HomePage() {
                   "0 4px 6px rgba(0,0,0,0.07), 0 20px 60px -12px rgba(0,0,0,0.2)",
               }}
             >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF9900]/10 rounded-full blur-3xl pointer-events-none" />
-              <div className="w-16 h-16 rounded-2xl bg-[#FF9900]/20 flex items-center justify-center flex-shrink-0">
+              <div
+                className="absolute top-0 right-0 w-64 h-64 bg-[#FF9900]/10 rounded-full blur-3xl pointer-events-none"
+                data-atomic-id="a1vrnjio" />
+              <div
+                className="w-16 h-16 rounded-2xl bg-[#FF9900]/20 flex items-center justify-center flex-shrink-0"
+                data-atomic-id="a1vt2dn6">
                 <Gift size={32} className="text-[#FF9900]" />
               </div>
-              <div>
-                <h3 className="text-white text-[20px] font-bold mb-1">
+              <div data-atomic-id="a1vuh7ro">
+                <h3
+                  className="text-white text-[20px] font-bold mb-1"
+                  data-atomic-id="afmcgzz">
                   Amazon Gift Cards
                 </h3>
-                <p className="text-white/60 text-[13px] leading-relaxed mb-4">
+                <p
+                  className="text-white/60 text-[13px] leading-relaxed mb-4"
+                  data-atomic-id="a1bts7vq">
                   The perfect gift for everyone. Available in any amount from
                   $1 to $2,000. Delivered instantly by email.
                 </p>
@@ -933,15 +1046,23 @@ export default function HomePage() {
                   "0 4px 6px rgba(0,0,0,0.07), 0 20px 60px -12px rgba(0,0,0,0.2)",
               }}
             >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#00A8E1]/10 rounded-full blur-3xl pointer-events-none" />
-              <div className="w-16 h-16 rounded-2xl bg-[#00A8E1]/20 flex items-center justify-center flex-shrink-0">
+              <div
+                className="absolute top-0 right-0 w-64 h-64 bg-[#00A8E1]/10 rounded-full blur-3xl pointer-events-none"
+                data-atomic-id="aaaam8k" />
+              <div
+                className="w-16 h-16 rounded-2xl bg-[#00A8E1]/20 flex items-center justify-center flex-shrink-0"
+                data-atomic-id="aabpgd2">
                 <Zap size={32} className="text-[#00A8E1]" />
               </div>
-              <div>
-                <h3 className="text-white text-[20px] font-bold mb-1">
+              <div data-atomic-id="aad4ahk">
+                <h3
+                  className="text-white text-[20px] font-bold mb-1"
+                  data-atomic-id="a1vxn3pv">
                   Amazon Rewards Visa
                 </h3>
-                <p className="text-white/60 text-[13px] leading-relaxed mb-4">
+                <p
+                  className="text-white/60 text-[13px] leading-relaxed mb-4"
+                  data-atomic-id="apqhdd6">
                   Earn 5% back at Amazon and Whole Foods Market. 2% at
                   restaurants, gas stations, and drugstores.
                 </p>
@@ -956,24 +1077,31 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── Final CTA ──────────────────────────────────────────────────── */}
-      <section id="contact" className="py-16 bg-[#131921]">
-        <div className="max-w-[1500px] mx-auto px-4 text-center">
+      <section id="contact" className="py-16 bg-[#131921]" data-atomic-id="aid2ba0">
+        <div
+          className="max-w-[1500px] mx-auto px-4 text-center"
+          data-atomic-id="a9ypwnd">
           <motion.div
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
           >
-            <h2 className="text-white text-[32px] md:text-[40px] font-bold mb-4 text-balance">
+            <h2
+              className="text-white text-[32px] md:text-[40px] font-bold mb-4 text-balance"
+              data-atomic-id="aknwrdy">
               Earth's Biggest Selection. Delivered.
             </h2>
-            <p className="text-white/60 text-[16px] leading-relaxed mb-8 max-w-xl mx-auto text-pretty">
+            <p
+              className="text-white/60 text-[16px] leading-relaxed mb-8 max-w-xl mx-auto text-pretty"
+              data-atomic-id="a1ifr0qm">
               Millions of products. Competitive prices. Fast, reliable delivery
               right to your door. Start shopping today.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div
+              className="flex flex-wrap items-center justify-center gap-4"
+              data-atomic-id="a16pu8dv">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
                 <Link
                   href="/search"
