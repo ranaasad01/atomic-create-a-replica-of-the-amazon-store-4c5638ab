@@ -955,7 +955,9 @@ export default function HomePage() {
                 className="text-[#0F1111] text-[14px] leading-relaxed mb-4 italic"
                 data-atomic-id="a21neau"
                 data-atomic-instance={__atomicIdx}
-                style={__atomicIdx === 1 ? {
+                style={__atomicIdx === 2 ? {
+                  fontSize: "20px"
+                } : __atomicIdx === 1 ? {
                   color: "#0f1111",
                   backgroundColor: "#f41515"
                 } : __atomicIdx === 0 ? {
