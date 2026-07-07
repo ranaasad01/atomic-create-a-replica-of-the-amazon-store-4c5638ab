@@ -854,25 +854,7 @@ export default function HomePage() {
                 data-atomic-id="a1c17d4r"
                 style={{
                   color: "#f7f8f8"
-                }}>
-                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  <Link
-                    href="/search"
-                    className="inline-flex items-center gap-2 bg-[#FF9900] hover:bg-[#F7CA00] text-[#0F1111] font-bold px-6 py-3 rounded-full text-[14px] transition-colors duration-200"
-                  >
-                    Try Prime Free
-                    <ArrowRight size={15} />
-                  </Link>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  <Link
-                    href="/search"
-                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-full text-[14px] border border-white/20 transition-colors duration-200"
-                  >
-                    Learn More
-                  </Link>
-                </motion.div>
-              </div>
+                }}>Try Prime</div>
             </motion.div>
 
             <motion.div
